@@ -7,6 +7,7 @@ paswd = "sachin28"
 auth_v = (user,paswd)
 
 data = requests.get(url1, auth=auth_v)
+print(data.content)
 dict = json.loads(data.text)
 dict1 = dict.get('test_input')
 string = dict1.get('text')
